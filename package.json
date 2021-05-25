@@ -1,12 +1,12 @@
 {
   "name": "@finsiot/eslint-config-finsiot-react-native",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "eslint sharable config in react-native platform , create by finsiot",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "deepcode",
   "license": "ISC",
   "dependencies": {
     "@react-native-community/eslint-plugin": "^1.1.0",
@@ -19,14 +19,14 @@
     "eslint-plugin-react": "7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
     "eslint-plugin-react-native": "3.8.1",
-    "eslint-config-prettier": "^6.10.1",
-    "eslint-plugin-prettier": "3.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "3.3.1",
     "prettier": "2.3.0"
   },
   "peerDependencies": {
-    "eslint": ">=6"
+    "eslint": ">=7"
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^7.27.0"
   }
 }
