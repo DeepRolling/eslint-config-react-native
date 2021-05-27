@@ -3,7 +3,7 @@
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- *
+ * ref : https://github.com/AlloyTeam/eslint-config-alloy
  * @format
  */
 
@@ -18,7 +18,7 @@ module.exports = {
 
   extends: [
     'plugin:prettier/recommended', // https://github.com/prettier/eslint-plugin-prettier#recommended-configuration
-    'prettier/react',
+    'prettier',
   ],
 
   plugins: ['eslint-comments', 'react', 'react-hooks', 'react-native', '@react-native-community', 'jest'],
@@ -94,10 +94,10 @@ module.exports = {
           },
         ],
         /**
-         * 优先使用 interface 而不是 type
-         * @reason interface 可以 implement, extend 和 merge
+         * 随便你使用type还是interface
+         * @reason interface 可以 implement, extend 和 merge , type可以强制规定轮廓
          */
-        '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+        '@typescript-eslint/consistent-type-definitions': 'off',
         /**
          * 必须使用 import type 导入类型
          */
@@ -336,10 +336,10 @@ module.exports = {
         'no-redeclare': 'off',
         '@typescript-eslint/no-redeclare': 'off',
         /**
-         * 禁止使用 require
+         * 在react-native中资源文件需要使用require引入
          * @reason 统一使用 import 来引入模块，特殊情况使用单行注释允许 require 引入
          */
-        '@typescript-eslint/no-require-imports': 'error',
+        '@typescript-eslint/no-require-imports': 'off',
         /**
          * 禁止变量名与上层作用域内的已定义的变量重复
          * @reason 很多时候函数的形参和传参是同名的
@@ -744,7 +744,7 @@ module.exports = {
     // The following rules are made available via `eslint-plugin-eslint-comments`
     'eslint-comments/no-aggregating-enable': 1, // disallows eslint-enable comments for multiple eslint-disable comments
     'eslint-comments/no-unlimited-disable': 1, // disallows eslint-disable comments without rule names
-    'eslint-comments/no-unused-disable': 1, // disallow disables that don't cover any errors
+    'eslint-comments/no-unused-disable': 0, // disallow disables that don't cover any errors
     'eslint-comments/no-unused-enable': 1, // // disallow enables that don't enable anything or enable rules that weren't disabled
 
     // Stylistic Issues
@@ -768,7 +768,6 @@ module.exports = {
     'no-empty-character-class': 1, // disallow the use of empty character classes in regular expressions
     'no-lonely-if': 0, // disallow if as the only statement in an else block (off by default)
     'no-new-object': 1, // disallow use of the Object constructor
-    'no-spaced-func': 1, // disallow space between function identifier and application
     'no-ternary': 0, // disallow the use of ternary operators (off by default)
     'no-trailing-spaces': 1, // disallow trailing whitespace at the end of lines
     'no-underscore-dangle': 0, // disallow dangling underscores in identifiers
@@ -832,5 +831,11 @@ module.exports = {
     'jest/no-focused-tests': 1,
     'jest/no-identical-title': 1,
     'jest/valid-expect': 1,
+
+
+    //prettier disable prettier , manual code format when submit code
+    'prettier/prettier': 0,
+
+
   },
 };
