@@ -1,6 +1,6 @@
 {
   "name": "@finsiot/eslint-config-finsiot-react-native",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "eslint sharable config in react-native platform , create by finsiot",
   "main": "index.js",
   "scripts": {
