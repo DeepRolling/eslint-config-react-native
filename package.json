@@ -1,7 +1,7 @@
 {
-  "name": "@finsiot/eslint-config-finsiot-react-native",
+  "name": "eslint-config-react-native",
   "version": "1.0.6",
-  "description": "eslint sharable config in react-native platform , create by finsiot",
+  "description": "eslint sharable config in react-native platform , create by deepcode",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
